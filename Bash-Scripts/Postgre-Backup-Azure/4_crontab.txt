@@ -1,0 +1,12 @@
+crontab -e
+# Backup job
+0 22 * * * /PATH/TO/SCRIPT/1_pg-backup.sh
+0 10 * * * /PATH/TO/SCRIPT/1_pg-backup.sh
+
+
+# Upload job (5 minutes after backup)
+5 22 * * * /PATH/TO/SCRIPT/2_upload-backup.sh
+5 10 * * * /PATH/TO/SCRIPT/2_upload-backup.sh
+
+
+
